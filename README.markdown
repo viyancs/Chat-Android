@@ -1,4 +1,4 @@
-Andorid Chat
+Chat Android
 ============
 
 this repository is android application for chat,and i'm using some technology like this:
@@ -17,7 +17,7 @@ Running The Application
 	sudo mongod;
 7) run socket.io server 
 	sudo node app.js;
-8) run Android Chat app in eclipse or if you already apk file just install to android smartphone.
+8) run Chat Android app in eclipse or if you already apk file just install to android smartphone.
 9) to test select peoples who want to send and receive chat.
 
 Features

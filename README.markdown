@@ -44,7 +44,7 @@ Bugging
 Licence 
 ----------------------
 
-just send email to msofyancs@gmail.com if you want to use this apps
+just fork and send email to msofyancs@gmail.com if you want to use this apps, i wanna to update this code to be better.
 
 	
 

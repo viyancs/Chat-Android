@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<EditText android:id="@+id/txtMessage" android:layout_height="wrap_content"
+		android:layout_width="match_parent">
+		<requestFocus></requestFocus>
+	</EditText>
+	<Button android:text="send" android:id="@+id/btnSend"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<TextView android:text="Chat to viyancs" android:id="@+id/txtChat"
+		android:layout_width="match_parent" android:layout_height="wrap_content"></TextView>
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:id="@+id/chatBox">
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

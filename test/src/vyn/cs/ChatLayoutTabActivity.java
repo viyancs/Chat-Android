@@ -2,7 +2,8 @@
  * Chat Layout Tab Activity - Chat-Android
  *
  * create main tab to ui android
- * get intent from ProcessAllSocket
+ * get intent from Test Activity when request and response socket
+ * get intent from Dashboard Activity
  * send intent to Chat Activity
  * send intent to Group Activity
  * send intent to Dashboard Activity

@@ -1,3 +1,18 @@
+/**
+ * Chat Layout Tab Activity - Chat-Android
+ *
+ * create main tab to ui android
+ * get intent from ProcessAllSocket
+ * send intent to Chat Activity
+ * send intent to Group Activity
+ * send intent to Dashboard Activity
+ *
+ * @author    M Sofiyan
+ * @email     msofyancs@gmail.com
+ * @skypeid   viyancs
+ * please don't remove this comment if you want to using part of full this code
+ * 
+ **/
 package vyn.cs;
 
 import java.util.ArrayList;

@@ -1,3 +1,16 @@
+/**
+ * Test Activity - Chat-Android
+ *
+ * implement login to chat
+ * connect to socket io 
+ *
+ * @author    M Sofiyan
+ * @email     msofyancs@gmail.com
+ * @skypeid   viyancs
+ * please don't remove this comment if you want to using part of full this code
+ * 
+ **/
+
 package vyn.cs;
 
 import java.io.IOException;
@@ -68,7 +81,7 @@ public class TestActivity extends Activity {
 
 					// send chat to server
 					try {
-						socket.emit("chat", new JSONObject().put("msg",
+						processTest.getSocketIo.emit("chat", new JSONObject().put("msg",
 								inputLogin.getText().toString()));
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
@@ -87,131 +100,6 @@ public class TestActivity extends Activity {
 		layout.addLayout(lay,chatClientServer.createTextView(identity),lp);
 	}
 
-	public interface sendMessage{
-		void addLayout(LinearLayout a,TextView b, LayoutParams c);
-	}
-	
-	sendMessage layout = new sendMessage(){
-		@Override
-		public void addLayout(LinearLayout a, TextView b, LayoutParams c) {
-			a.addView(b,c); 
-			
-		}
-    };
-
-	public void login() {
-		// to open socket on execution just place the code oncreate only one
-		// time after that client can make request and response
-		socket = new IOSocket("http://192.168.43.191:3001", callback);
-		//Log.d("status connection " ,socket.getConnection().toString());
-		try {
-			socket.connect();
-			//setSocket(socket);
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
-	MessageCallback callback = new MessageCallback() {
-		@Override
-		public void on(String event, final JSONObject... data) {
-			System.out.println("the event is = " + event.toString());
-			if (event.toString().equals("online")) {
-				try {
-					if (data[0].get("online").getClass().toString()
-							.equals("class org.json.JSONArray")) {
-//						runOnUiThread(new Runnable() {
-//							public void run() {
-//								String name = parseDataJson(data, "online");
-//								Toast.makeText(getBaseContext(), "" + name, Toast.LENGTH_SHORT).show();
-//								Intent inten = new Intent(TestActivity.this, DashboardActivity.class);
-//								inten.putExtra("username", name);
-//								inten.putExtra("ID", "834725");
-//								startActivity(inten);
-//							}
-//						});
-					}
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}else if(event.toString().equals("chat")){
-				runOnUiThread(new Runnable(){
-					public void run(){
-						//ChatActivity chat = new ChatActivity();
-						//chat.parseDataJsonChat("jgh", "Server");
-					}
-				});
-				
-			} else {
-				runOnUiThread(new Runnable() {
-					public void run() {
-						Log.d("haloo ", "kok masuk sih");
-						// send chat to android layout
-						//sendChat(parseDataJson(data, "msg"), "Server");
-					}
-				});
-			}
-		}
-
-		@Override
-		public void onMessage(String message) {
-			// Handle simple messages
-			System.out.println("the simple message is = " + message);
-		}
-
-		@Override
-		public void onMessage(JSONObject message) {
-			// Handle JSON messages
-			System.out.println("the json message is = " + message);
-		}
-
-		@Override
-		public void onConnect() {
-			// Socket connection opened
-			try {
-				socket.emit("login", new JSONObject().put("username", inputLogin
-						.getText().toString()));
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println("server is connected");
-		}
-
-		@Override
-		public void onDisconnect() {
-			// Socket connection closed
-			System.out.println("server is closed");
-		}
-	};
-
-	public String parseDataJson(JSONObject[] data, String string) {
-		Log.d("data jsonnya = ", data[0].toString());
-		String name = null;
-		Gson gson = new Gson();
-		ResponseRoot response = gson.fromJson(data[0].toString(),
-				ResponseRoot.class);
-
-		Log.d("results", response.toString());
-		List<Online> results = response.online;
-		Log.d("results", results.toString());
-		for (Online result : results) {
-			sendChat(linearLayout,layoutParams,result.username, string,TestActivity.this);
-			name = result.username;
-			// Log.d("_id = ",result._id);
-			// Toast.makeText(this, result._id, Toast.LENGTH_SHORT).show();
-			// Toast.makeText(this, result.username, Toast.LENGTH_SHORT).show();
-		}
-		System.out.println(name);
-		return name;
-	};
 	
 	
 };

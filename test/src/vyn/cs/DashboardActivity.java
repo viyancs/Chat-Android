@@ -1,3 +1,16 @@
+/**
+ * Dashboard Activity - Chat-Android
+ *
+ * create list of users is online
+ * get intent from Chat Layout Activity
+ * send intent to Chat Layour Activity when select user
+ *
+ * @author    M Sofiyan
+ * @email     msofyancs@gmail.com
+ * @skypeid   viyancs
+ * please don't remove this comment if you want to using part of full this code
+ * 
+ **/
 package vyn.cs;
 
 import java.util.ArrayList;

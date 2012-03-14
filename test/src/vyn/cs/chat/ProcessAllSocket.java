@@ -234,62 +234,6 @@ public class ProcessAllSocket extends Application{
 		}
 	};
 
-//	/*
-//	 * call back for web socket in chatActivity class
-//	 * 
-//	 * ============================================================
-//	 */
-//	MessageCallback chatActivityCallback = new MessageCallback() {
-//		@Override
-//		public void on(String event, final JSONObject... data) {
-//			System.out.println("the event is = " + event.toString());
-//			if(event.toString().equals("chat")){
-//				((Activity) currentContext).runOnUiThread(new Runnable() {
-//				     public void run() {
-//				    	JSONParse json = new JSONParse();
-//						String msg = json.parseDataJsonChat(data, "msg");
-//						sendChat(linearLayout, layoutParams, msg, "Server", currentContext.getApplicationContext());
-//				    }
-//				});				
-//			}
-//			
-//		}
-//
-//		@Override
-//		public void onMessage(String message) {
-//			// Handle simple messages
-//			System.out.println("the simple message is = " + message);
-//		}
-//
-//		@Override
-//		public void onMessage(JSONObject message) {
-//			// Handle JSON messages
-//			System.out.println("the json message is = " + message);
-//		}
-//
-//		@Override
-//		public void onConnect() {			
-//			System.out.println("server is connected in case chat activity");
-//			try {
-//				Log.d("socket",getSocketIo().getSessionID());
-//				getSocketIo().emit("chat", new JSONObject().put("msg", msg).put("user", user).put("socketid", socketid));
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			} catch (JSONException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		} 
-//
-//		@Override
-//		public void onDisconnect() {
-//			// Socket connection closed
-//			System.out.println("server is closed to chat activity");
-//		}
-//	};
-
-
 
 }
 

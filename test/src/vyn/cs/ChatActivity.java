@@ -1,3 +1,17 @@
+/**
+ * Chat Activity - Chat-Android
+ *
+ * process send chat to another people
+ * parsing chat from server to ui android
+ *
+ * @author    M Sofiyan
+ * @email     msofyancs@gmail.com
+ * @skypeid   viyancs
+ * please don't remove this comment if you want to using part of full this code
+ * 
+ **/
+
+
 package vyn.cs;
 
 import java.io.IOException;

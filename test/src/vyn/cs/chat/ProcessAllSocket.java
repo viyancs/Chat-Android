@@ -29,7 +29,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import vyn.cs.ChatLayoutTabActivity;
-import vyn.cs.TestActivity.sendMessage;
+import vyn.cs.interfaces.sendMessage;
 import vyn.cs.interfaces.TestActivityInterface;
 import vyn.json.parse.JSONParse;
 import vyn.socket.IOSocket;

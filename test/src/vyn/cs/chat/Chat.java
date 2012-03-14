@@ -1,3 +1,14 @@
+/**
+ * Chat - Chat-Android
+ *
+ * model chat return element Textview
+ *
+ * @author    M Sofiyan
+ * @email     msofyancs@gmail.com
+ * @skypeid   viyancs
+ * please don't remove this comment if you want to using part of full this code
+ * 
+ **/
 package vyn.cs.chat;
 
 import android.content.Context;

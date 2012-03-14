@@ -21,6 +21,25 @@ Running The Application
 	`sudo mongod;`
 * run socket.io server <br> 
 	`sudo node app.js;`
+* change url to your server
+* ```java
+	TestActivityInterface tac = new TestActivityInterface() {	
+		@Override
+		public void TestActivitySocket(IOSocket a, MessageCallback b) {
+			// TODO Auto-generated method stub
+			a = new IOSocket("http://192.168.1.22:3001", b);
+	    		try {
+	    			a.connect();
+	    			a.setSessionID("loginsession");
+	    			setSocketIo(a);
+	    		} catch (IOException e) {
+	    			// TODO Auto-generated catch block
+	    			e.printStackTrace();
+	    		}
+			
+		}
+	 };
+	 
 * run Chat Android app in eclipse or if you already apk file just install to android smartphone.<br>
 * to test select peoples who want to send and receive chat.<br>
 
@@ -38,13 +57,13 @@ Bugging
 * not have notification in ui android because the layout is 60% fix
 * group chat is not active
 * setting in ui chat not active
-* broadcast message is not active(need socket network programing if you want to use in anoter language programing  with same server).
+* broadcast message is not active(need socket network programing if you want to use in another language programing  with same server).
 * login is not have authentication
 
 Licence 
 ----------------------
 
-just fork and send email to msofyancs@gmail.com if you want to use this apps, i wanna to update this code to be better.
+just fork and follow this repository if any question send email to msofyancs@gmail.com , i wanna to update this code to be better.
 
 	
 

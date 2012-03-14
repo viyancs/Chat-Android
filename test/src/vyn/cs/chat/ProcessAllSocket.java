@@ -1,3 +1,17 @@
+/**
+ * Process All Socket - Chat-Android
+ *
+ * connect to server socket io
+ * handling response message from server
+ * request message to server
+ * update ui android to another activity
+ *
+ * @author    M Sofiyan
+ * @email     msofyancs@gmail.com
+ * @skypeid   viyancs
+ * please don't remove this comment if you want to using part of full this code
+ * 
+ **/
 package vyn.cs.chat;
 
 import java.io.IOException;

@@ -1,3 +1,7 @@
+Most Important this owner is no longer to update this repository, please be pattient ( he is very bussy).
+============
+
+
 Chat Android
 ============
 
